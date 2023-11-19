@@ -1,5 +1,9 @@
+import java.net.URI
+
 plugins {
     id("com.android.library")
+    id("maven-publish")
+    id("com.palantir.git-version") version "3.0.0"
 }
 
 android {
@@ -29,9 +33,37 @@ tasks.withType(Test::class).configureEach {
 }
 
 dependencies {
-//    implementation("androidx.appcompat:appcompat:1.6.1")
-//    implementation("com.google.android.material:material:1.10.0")
-//    testImplementation("junit:junit:4.13.2")
-//    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-//    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+}
+
+fun getVersionName(): String {
+    val versionDetails: groovy.lang.Closure<com.palantir.gradle.gitversion.VersionDetails> by extra
+    val details = versionDetails()
+    return details.lastTag
+}
+
+fun getArtificatId(): String {
+    return "common-tools-android"
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.cherrydev"
+            artifactId = getArtificatId()
+            version = getVersionName()
+            artifact("$buildDir/outputs/aar/${getArtificatId()}-release.aar")
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = URI.create("https://maven.pkg.github.com/romansj/CommonToolsAndroid")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
 }
