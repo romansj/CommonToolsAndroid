@@ -1,13 +1,17 @@
 package com.cherrydev.benchmarkmicro;
 
+import static org.junit.Assert.assertEquals;
+
+import android.content.Context;
 import android.util.Log;
 
 import androidx.benchmark.BenchmarkState;
 import androidx.benchmark.junit4.BenchmarkRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
 
 import org.junit.Rule;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
