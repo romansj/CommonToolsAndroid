@@ -1,0 +1,11 @@
+android {
+    signingConfigs {
+        release {
+            // source ~/.gradlerccommonandroid
+            storeFile file(String.valueOf(System.getenv("KEYSTORE_PATH_CTA")))
+            storePassword System.getenv("KEYSTORE_PASSWORD_CTA")
+            keyPassword System.getenv("KEY_PASSWORD_CTA")
+            keyAlias System.getenv("KEY_ALIAS_CTA")
+        }
+    }
+}

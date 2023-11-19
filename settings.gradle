@@ -1,0 +1,56 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.google.com/' }
+        maven { url 'https://dl.bintray.com/guardian/android' }
+        maven { url 'https://dl.bintray.com/ppartisan/maven/' }
+        maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local' }
+    }
+}
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.5.0'
+    id("com.gradle.enterprise") version("3.15.1")
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+gradleEnterprise {
+    buildScan {
+        publishAlways()
+        termsOfServiceUrl = "https://gradle.com/terms-of-service"
+        termsOfServiceAgree = "yes"
+    }
+}
+
+
+rootProject.name = "CommonTools"
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+include ':app'
+include ':benchmarkmacro'
+include ':benchmarkmicro'
+include ':tools'
+include ':tools:behavior'
+include ':tools:debounce'
+include ':tools:common'
+include ':tools:recyclerview'
+include ':tools:keyboard'
+include ':tools:navigation'
+include ':tools:time'
+include ':tools:file'
+include ':tools:network'
+include ':tools:sharing'
+include ':tools:dialogs'
+
+

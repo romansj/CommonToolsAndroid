@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_not_found">App not found</string>
+    <string name="copy_to_clipboard_success">Copied to clipboard</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="share_via">Share via</string>
+</resources>

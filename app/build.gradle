@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.application'
+}
+
+apply from: "$rootDir/gradle/android.gradle"
+
+android {
+    namespace 'com.cherrydev.commontools'
+}
+
+
+dependencies {
+
+
+
+    implementation(projects.tools.behavior)
+    implementation(projects.tools.common)
+    implementation(projects.tools.debounce)
+    implementation(projects.tools.dialogs)
+    implementation(projects.tools.file)
+    implementation(projects.tools.keyboard)
+    implementation(projects.tools.navigation)
+    implementation(projects.tools.network)
+    implementation(projects.tools.recyclerview)
+    implementation(projects.tools.sharing)
+    implementation(projects.tools.time)
+
+
+    implementation(libs.jetbrains.annotations)
+    implementation(libs.constraintlayout)
+    implementation(libs.timber)
+
+}

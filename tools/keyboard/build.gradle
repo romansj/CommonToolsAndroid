@@ -1,0 +1,12 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "$rootDir/gradle/android.gradle"
+
+android {
+    namespace 'com.cherrydev.keyboard'
+}
+dependencies {
+    implementation(libs.kotlin.stdlib.jdk8)
+}
