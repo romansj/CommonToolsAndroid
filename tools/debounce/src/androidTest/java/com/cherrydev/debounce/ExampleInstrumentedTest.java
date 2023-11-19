@@ -1,6 +1,7 @@
 package com.cherrydev.debounce;
 
-import static org.junit.Assert.assertEquals;
+
+import static junit.framework.TestCase.assertEquals;
 
 import android.content.Context;
 

@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.cherrydev.tools"
+    namespace = "com.cherrydev.common-tools-android"
     compileSdk = 33
 
     defaultConfig {
@@ -43,7 +43,7 @@ fun getVersionName(): String {
 }
 
 fun getArtificatId(): String {
-    return "common-tools-android"
+    return "tools" // todo Setting this only tells it where to look. How to change what is generated?
 }
 
 publishing {

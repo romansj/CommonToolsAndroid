@@ -1,12 +1,12 @@
 package com.cherrydev.time;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import android.content.Context;
 
 import androidx.test.platform.app.InstrumentationRegistry;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Testing CommonTimeUtils getTimeSpanString method which requires Android Context (only because Android's DateFormat needs it to know 12/24h)

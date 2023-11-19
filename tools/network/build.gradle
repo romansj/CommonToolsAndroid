@@ -3,9 +3,7 @@ plugins {
 }
 
 apply from: "$rootDir/gradle/android.gradle"
-android {
-    namespace 'com.cherrydev.network'
-}
+
 dependencies {
 
 }

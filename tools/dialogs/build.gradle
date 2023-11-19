@@ -4,10 +4,6 @@ plugins {
 
 apply from: "$rootDir/gradle/android.gradle"
 
-android {
-    namespace 'com.cherrydev.dialogs'
-}
-
 dependencies {
     implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'
     implementation "com.andkulikov:transitionseverywhere:2.1.0"  //todo license

@@ -6,12 +6,16 @@ apply from: "$rootDir/gradle/android.gradle"
 
 android {
     namespace 'com.cherrydev.commontools'
+
+    defaultConfig {
+        versionCode = 1
+        versionName = "DEMO"
+    }
 }
 
 
 dependencies {
-
-
+    // implementation(libs.tools)
 
     implementation(projects.tools.behavior)
     implementation(projects.tools.common)

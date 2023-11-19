@@ -1,10 +1,12 @@
 package com.cherrydev.network;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 
+@SuppressLint("MissingPermission")
 public class NetworkUtils {
 
     public static boolean hasNetworkConnection() {
