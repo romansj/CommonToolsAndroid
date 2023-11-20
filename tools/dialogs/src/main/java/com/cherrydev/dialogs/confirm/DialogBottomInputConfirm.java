@@ -19,7 +19,6 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.cherrydev.commontools.databinding.DialogBottomInputConfirmBinding;
 import com.cherrydev.dialogs.utils.DialogInputListener;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -27,6 +26,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.button.MaterialButton;
 
 import org.jetbrains.annotations.NotNull;
+
+import io.github.romansj.tools.dialogs.databinding.DialogBottomInputConfirmBinding;
 
 //https://guides.codepath.com/android/using-dialogfragment
 public class DialogBottomInputConfirm extends BottomSheetDialogFragment {

@@ -1,6 +1,12 @@
 apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
+android {
+    namespace "${PUBLISH_GROUP_ID}.${PUBLISH_ARTIFACT_ID}"
+    println("namespace: " + namespace + ", version: " + PUBLISH_VERSION)
+}
+
+
 task androidSourcesJar(type: Jar) {
     archiveClassifier.set('sources')
     if (project.plugins.findPlugin("com.android.library")) {

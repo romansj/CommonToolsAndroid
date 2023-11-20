@@ -9,10 +9,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.cherrydev.commontools.R;
+
 
 import java.util.ArrayList;
 import java.util.List;
+
+import io.github.romansj.tools.dialogs.R;
 
 @Deprecated
 public class UsedDataAdapter extends RecyclerView.Adapter<UsedDataAdapter.ViewHolder> {

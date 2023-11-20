@@ -8,13 +8,15 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
-import com.cherrydev.commontools.R;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import io.github.romansj.tools.sharing.R;
+
 
 public class AppListHelper {
 

@@ -22,12 +22,15 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.cherrydev.commontools.R;
+
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import io.github.romansj.tools.sharing.R;
+
 
 public class DialogShare extends BottomSheetDialogFragment implements ShareAdapter.ItemClickListener {
 

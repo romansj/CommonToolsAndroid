@@ -3,13 +3,10 @@ apply from: "$rootDir/gradle/android.gradle" // signing for release comes after 
 
 
 ext {
-    PUBLISH_VERSION = '0.0.1'
-    PUBLISH_ARTIFACT_ID = 'debounce'
+
+    PUBLISH_ARTIFACT_ID = name
 }
 
-android {
-    namespace "com.cherrydev.commontools.${PUBLISH_ARTIFACT_ID}"
-}
 
 apply from: "${rootProject.projectDir}/gradle/publish-module.gradle"
 

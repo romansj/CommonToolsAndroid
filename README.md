@@ -32,26 +32,3 @@ implementation 'io.github.romansj.tools:keyboard:0.0.1'
 ```
 
 
-## Publishing
-If Gradle is installed, then `gradle command` will suffice, otherwise `./gradlew`
-
-Run publish task from command line to pick up environment variables:
-```groovy
-gradle publish
-```
-
-The following environment variables need to be defined
-```
-OSSRH_USERNAME
-OSSRH_PASSWORD
-SONATYPE_STAGING_PROFILE_ID
-SIGNING_KEY_ID
-SIGNING_PASSWORD
-SIGNING_KEY
-```
-
-## Code formatting
-Spotless is used to format code in Google Java Format.
-```groovy
-gradle spotlessJavaApply
-```

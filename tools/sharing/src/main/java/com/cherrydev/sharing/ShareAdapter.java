@@ -10,9 +10,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.cherrydev.commontools.R;
+
 
 import java.util.List;
+
+import io.github.romansj.tools.sharing.R;
+
 
 public class ShareAdapter extends RecyclerView.Adapter<ShareAdapter.ViewHolder> {
 

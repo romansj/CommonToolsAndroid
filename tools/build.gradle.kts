@@ -4,10 +4,15 @@ plugins {
     id("com.palantir.git-version") version "3.0.0"
 }
 
+apply(from = "$rootDir/gradle/android-library.gradle") // library release variant
+apply(from = "$rootDir/gradle/android.gradle")// signing for release comes after defining release variant
+
 extra["PUBLISH_GROUP_ID"] = "io.github.romansj.tools"
+extra["PUBLISH_VERSION"] = "0.0.3"
+extra["PUBLISH_ARTIFACT_ID"] = name
 
 android {
-    namespace = "com.cherrydev.tools"
+    namespace = extra.get("PUBLISH_GROUP_ID").toString()
     compileSdk = 33
 
     defaultConfig {
@@ -26,7 +31,14 @@ android {
             )
         }
     }
+
+    subprojects.forEach { project ->
+        println("subprojects " + project.name)
+    }
 }
+
+apply(from = "${rootProject.projectDir}/gradle/publish-module.gradle")
+
 
 tasks.withType(Test::class).configureEach {
     useJUnitPlatform()
@@ -35,41 +47,3 @@ tasks.withType(Test::class).configureEach {
 dependencies {
 
 }
-
-//fun getVersionName(): String {
-//    val versionDetails: groovy.lang.Closure<com.palantir.gradle.gitversion.VersionDetails> by extra
-//    val details = versionDetails()
-//    // return details.lastTag
-//    return "1.0.0"
-//}
-//
-//fun getArtificatId(): String {
-//    return "tools" // todo Setting this only tells it where to look. How to change what is generated?
-//}
-
-//publishing {
-//    publications {
-//        create<MavenPublication>("maven") {
-//            groupId = "io.github.romansj"
-//            artifactId = getArtificatId()
-//            version = getVersionName()
-//            artifact("$buildDir/outputs/aar/${getArtificatId()}-release.aar")
-//        }
-//    }
-//
-//    repositories {
-//        maven {
-//            name = "GitHubPackages"
-//            url = URI.create("https://maven.pkg.github.com/romansj/CommonToolsAndroid")
-//            credentials {
-//                username = System.getenv("GITHUB_ACTOR")
-//                password = System.getenv("GITHUB_TOKEN")
-//            }
-//        }
-//    }
-//}
-//
-//
-//tasks.register("publishToGithub"){
-//
-//}

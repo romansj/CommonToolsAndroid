@@ -2,13 +2,10 @@ apply from: "$rootDir/gradle/android-library.gradle" // library release variant
 apply from: "$rootDir/gradle/android.gradle" // signing for release comes after defining release variant
 
 ext {
-    PUBLISH_VERSION = '0.0.1'
-    PUBLISH_ARTIFACT_ID = 'sharing'
+
+    PUBLISH_ARTIFACT_ID = name
 }
 
-android {
-    namespace "com.cherrydev.commontools.${PUBLISH_ARTIFACT_ID}"
-}
 
 apply from: "${rootProject.projectDir}/gradle/publish-module.gradle"
 
