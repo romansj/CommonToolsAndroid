@@ -7,6 +7,10 @@ ext {
     PUBLISH_ARTIFACT_ID = 'dialogs'
 }
 
+android {
+    namespace "com.cherrydev.commontools.${PUBLISH_ARTIFACT_ID}"
+}
+
 apply from: "${rootProject.projectDir}/gradle/publish-module.gradle"
 
 dependencies {

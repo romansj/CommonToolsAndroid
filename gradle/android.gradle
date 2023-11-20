@@ -1,8 +1,6 @@
 apply from: "$rootDir/gradle/signing.gradle"
 
 android {
-    namespace 'com.cherrydev.commontools'
-
     defaultConfig {
         minSdkVersion 26
         targetSdkVersion 31

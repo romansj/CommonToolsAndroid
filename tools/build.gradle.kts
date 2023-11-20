@@ -36,16 +36,16 @@ dependencies {
 
 }
 
-fun getVersionName(): String {
-    val versionDetails: groovy.lang.Closure<com.palantir.gradle.gitversion.VersionDetails> by extra
-    val details = versionDetails()
-    // return details.lastTag
-    return "1.0.0"
-}
-
-fun getArtificatId(): String {
-    return "tools" // todo Setting this only tells it where to look. How to change what is generated?
-}
+//fun getVersionName(): String {
+//    val versionDetails: groovy.lang.Closure<com.palantir.gradle.gitversion.VersionDetails> by extra
+//    val details = versionDetails()
+//    // return details.lastTag
+//    return "1.0.0"
+//}
+//
+//fun getArtificatId(): String {
+//    return "tools" // todo Setting this only tells it where to look. How to change what is generated?
+//}
 
 //publishing {
 //    publications {
