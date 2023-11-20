@@ -1,8 +1,13 @@
-plugins {
-    id 'com.android.library'
+apply from: "$rootDir/gradle/android-library.gradle" // library release variant
+apply from: "$rootDir/gradle/android.gradle" // signing for release comes after defining release variant
+
+
+ext {
+    PUBLISH_VERSION = '0.0.1'
+    PUBLISH_ARTIFACT_ID = 'dialogs'
 }
 
-apply from: "$rootDir/gradle/android.gradle"
+apply from: "${rootProject.projectDir}/gradle/publish-module.gradle"
 
 dependencies {
     implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'

@@ -14,7 +14,7 @@ android {
 
 
     defaultConfig {
-        minSdk 23
+        minSdk 26
         targetSdk 33
 
         testInstrumentationRunner 'androidx.benchmark.junit4.AndroidBenchmarkRunner'
@@ -36,7 +36,8 @@ android {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(11)
+        languageVersion = JavaLanguageVersion.of(17)
+        vendor = JvmVendorSpec.AMAZON
     }
 }
 

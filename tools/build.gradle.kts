@@ -1,13 +1,13 @@
-import java.net.URI
-
 plugins {
     id("com.android.library")
     id("maven-publish")
     id("com.palantir.git-version") version "3.0.0"
 }
 
+extra["PUBLISH_GROUP_ID"] = "io.github.romansj.tools"
+
 android {
-    namespace = "com.cherrydev.common-tools-android"
+    namespace = "com.cherrydev.tools"
     compileSdk = 33
 
     defaultConfig {
@@ -39,31 +39,37 @@ dependencies {
 fun getVersionName(): String {
     val versionDetails: groovy.lang.Closure<com.palantir.gradle.gitversion.VersionDetails> by extra
     val details = versionDetails()
-    return details.lastTag
+    // return details.lastTag
+    return "1.0.0"
 }
 
 fun getArtificatId(): String {
     return "tools" // todo Setting this only tells it where to look. How to change what is generated?
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "com.cherrydev"
-            artifactId = getArtificatId()
-            version = getVersionName()
-            artifact("$buildDir/outputs/aar/${getArtificatId()}-release.aar")
-        }
-    }
-
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = URI.create("https://maven.pkg.github.com/romansj/CommonToolsAndroid")
-            credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
-            }
-        }
-    }
-}
+//publishing {
+//    publications {
+//        create<MavenPublication>("maven") {
+//            groupId = "io.github.romansj"
+//            artifactId = getArtificatId()
+//            version = getVersionName()
+//            artifact("$buildDir/outputs/aar/${getArtificatId()}-release.aar")
+//        }
+//    }
+//
+//    repositories {
+//        maven {
+//            name = "GitHubPackages"
+//            url = URI.create("https://maven.pkg.github.com/romansj/CommonToolsAndroid")
+//            credentials {
+//                username = System.getenv("GITHUB_ACTOR")
+//                password = System.getenv("GITHUB_TOKEN")
+//            }
+//        }
+//    }
+//}
+//
+//
+//tasks.register("publishToGithub"){
+//
+//}
