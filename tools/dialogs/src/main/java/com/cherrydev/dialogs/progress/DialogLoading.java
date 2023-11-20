@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.cherrydev.dialogs.R;
+import com.cherrydev.commontools.R;
 
 
 public class DialogLoading extends DialogFragment {

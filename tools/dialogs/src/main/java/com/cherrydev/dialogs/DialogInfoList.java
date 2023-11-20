@@ -20,7 +20,7 @@ import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.cherrydev.dialogs.databinding.DialogInfoListBinding;
+import com.cherrydev.commontools.databinding.DialogInfoListBinding;
 import com.cherrydev.dialogs.utils.DialogButtonListener;
 
 import java.util.ArrayList;

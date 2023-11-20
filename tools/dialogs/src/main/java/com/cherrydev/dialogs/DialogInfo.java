@@ -19,6 +19,8 @@ import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.cherrydev.commontools.R;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
+import com.cherrydev.commontools.R;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;

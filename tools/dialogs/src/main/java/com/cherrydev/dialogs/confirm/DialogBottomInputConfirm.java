@@ -19,6 +19,7 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.cherrydev.commontools.databinding.DialogBottomInputConfirmBinding;
 import com.cherrydev.dialogs.utils.DialogInputListener;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -30,7 +31,7 @@ import org.jetbrains.annotations.NotNull;
 //https://guides.codepath.com/android/using-dialogfragment
 public class DialogBottomInputConfirm extends BottomSheetDialogFragment {
 
-    private com.cherrydev.dialogs.databinding.DialogBottomInputConfirmBinding binding;
+    private DialogBottomInputConfirmBinding binding;
     private DialogInputListener listener;
 
 
@@ -62,7 +63,7 @@ public class DialogBottomInputConfirm extends BottomSheetDialogFragment {
 
 
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getActivity());
-        binding = com.cherrydev.dialogs.databinding.DialogBottomInputConfirmBinding.inflate(LayoutInflater.from(requireActivity()));
+        binding = DialogBottomInputConfirmBinding.inflate(LayoutInflater.from(requireActivity()));
         View parentView = binding.getRoot();
         bottomSheetDialog.setContentView(parentView);
         bottomSheetDialog.setOnDismissListener(dialog -> {

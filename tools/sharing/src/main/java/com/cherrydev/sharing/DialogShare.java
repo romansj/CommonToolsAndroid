@@ -22,6 +22,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.cherrydev.commontools.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
@@ -65,6 +66,7 @@ public class DialogShare extends BottomSheetDialogFragment implements ShareAdapt
 
     @NonNull
     @Override
+
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
 
         Activity context = getActivity();

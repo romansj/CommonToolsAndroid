@@ -13,8 +13,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
-import com.cherrydev.dialogs.R;
-import com.cherrydev.dialogs.databinding.FragmentWrapperBinding;
+import com.cherrydev.commontools.R;
+import com.cherrydev.commontools.databinding.FragmentWrapperBinding;
 
 
 public class WrapperDialogFragment extends DialogFragment {

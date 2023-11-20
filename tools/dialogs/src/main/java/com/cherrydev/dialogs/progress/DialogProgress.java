@@ -21,7 +21,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 import androidx.transition.TransitionManager;
 
-import com.cherrydev.dialogs.R;
+import com.cherrydev.commontools.R;
 import com.transitionseverywhere.Crossfade;
 
 public class DialogProgress extends DialogFragment {

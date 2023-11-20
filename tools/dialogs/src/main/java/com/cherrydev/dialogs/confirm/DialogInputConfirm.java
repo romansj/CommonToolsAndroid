@@ -19,7 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
-import com.cherrydev.dialogs.R;
+import com.cherrydev.commontools.R;
 import com.cherrydev.dialogs.utils.DialogInputListener;
 
 
