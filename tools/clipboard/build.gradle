@@ -6,10 +6,9 @@ ext {
     PUBLISH_ARTIFACT_ID = name
 }
 
+
 apply from: "${rootProject.projectDir}/gradle/publish-module.gradle"
 
 dependencies {
-    implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'
-    implementation "com.andkulikov:transitionseverywhere:2.1.0"  //todo license
-    implementation("org.apache.commons:commons-lang3:3.13.0")
+    implementation(projects.tools.common)
 }

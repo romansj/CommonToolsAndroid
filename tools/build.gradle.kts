@@ -8,7 +8,7 @@ apply(from = "$rootDir/gradle/android-library.gradle") // library release varian
 apply(from = "$rootDir/gradle/android.gradle")// signing for release comes after defining release variant
 
 extra["PUBLISH_GROUP_ID"] = "io.github.romansj.tools"
-extra["PUBLISH_VERSION"] = "0.0.3"
+extra["PUBLISH_VERSION"] = "1.0.0"
 extra["PUBLISH_ARTIFACT_ID"] = name
 
 android {

@@ -3,8 +3,6 @@ package com.cherrydev.common;
 import androidx.annotation.Nullable;
 
 
-//import io.realm.mongodb.AppException;
-
 public class MyResult<T> {
     private T result;
     private Exception error;

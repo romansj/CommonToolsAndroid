@@ -2,7 +2,6 @@ apply from: "$rootDir/gradle/android-library.gradle" // library release variant
 apply from: "$rootDir/gradle/android.gradle" // signing for release comes after defining release variant
 
 ext {
-
     PUBLISH_ARTIFACT_ID = name
 }
 

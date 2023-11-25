@@ -6,7 +6,7 @@ import static com.cherrydev.dialogs.utils.Constants.ARG_NEGATIVE_BUTTON_TEXT;
 import static com.cherrydev.dialogs.utils.Constants.ARG_POSITIVE_BUTTON_TEXT;
 import static com.cherrydev.dialogs.utils.Constants.ARG_STYLE;
 import static com.cherrydev.dialogs.utils.Constants.ARG_TITLE;
-import static com.cherrydev.dialogs.utils.StringUtils.isNullOrEmpty;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -72,11 +72,11 @@ public class DialogConfirm extends DialogFragment {
         String yes = args.getString(ARG_POSITIVE_BUTTON_TEXT);
         String no = args.getString(ARG_NEGATIVE_BUTTON_TEXT);
 
-        if (!isNullOrEmpty(title)) builder.setTitle(title);
-        if (!isNullOrEmpty(descr)) builder.setMessage(descr);
-        if (!isNullOrEmpty(yes))
+        if (!isBlank(title)) builder.setTitle(title);
+        if (!isBlank(descr)) builder.setMessage(descr);
+        if (!isBlank(yes))
             builder.setPositiveButton(yes, (dialog, which) -> listener.onPositiveButtonClicked());
-        if (!isNullOrEmpty(no))
+        if (!isBlank(no))
             builder.setNegativeButton(no, (dialog, which) -> listener.onNegativeButtonClicked());
 
         boolean cancelable = args.getBoolean(ARG_CANCELABLE);
