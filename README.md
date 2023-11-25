@@ -15,14 +15,14 @@ Modules:
   - recyclerview
   - sharing
   - time
-- benchmarkmacro
-- benchmarkmicro
+- benchmarkmacro (app performance measurement sample)
+- benchmarkmicro (code performance measurement sample)
 
 ## Installation
 Import only the modules you need:
 
 Kotlin DSL
-```kotlin
+```groovy
 implementation("io.github.romansj.tools:keyboard:0.0.1")
 ```
 
