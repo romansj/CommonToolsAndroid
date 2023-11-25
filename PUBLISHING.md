@@ -7,10 +7,12 @@ Increment those modules you plan to release:
 PUBLISH_VERSION = '0.0.1'
 ```
 
+## Publish to Maven Central
 Run publish task from command line to pick up environment variables:
 ```groovy
 gradle publish
 ```
+
 
 The following environment variables need to be defined
 ```
@@ -22,8 +24,22 @@ SIGNING_PASSWORD
 SIGNING_KEY
 ```
 
-## Code formatting
-Spotless is used to format code in Google Java Format.
+## Publish to local repository (Maven Local)
+Can run with IntelliJ because no environment variables are needed.
+
 ```groovy
-gradle spotlessJavaApply
+gradle lib:publishToMavenLocal
+```
+
+### Import in consumer project
+Edit repository list to include `mavenLocal`, e.g. in settings.gradle:
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal() // <-- Add this line
+    }
+}
 ```
