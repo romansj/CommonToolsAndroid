@@ -153,25 +153,28 @@ public abstract class BaseNavigator3<T extends Enum<T> & IDestination> implement
     }
 
     public T getActiveFragmentTag() {
-        T activeTag = null;
-
-        boolean stop = false;
-
-        for (int m = fragmentManager.getFragments().size() - 1; m >= 0; m--) {
-            Fragment fragment = fragmentManager.getFragments().get(m);
-
-            String fragmentTag = fragment.getTag();
-            for (T enumTag : enumValuesAll()) {
-                if (enumTag.name().equals(fragmentTag) && !fragment.isVisible()) {
-                    activeTag = enumTag;
-                    stop = true;
-                    break;
-                }
-            }
-
-            if (stop) break;
-        }
         return activeTag;
+
+
+//        T activeTag = null;
+//
+//        boolean stop = false;
+//
+//        for (int m = fragmentManager.getFragments().size() - 1; m >= 0; m--) {
+//            Fragment fragment = fragmentManager.getFragments().get(m);
+//
+//            String fragmentTag = fragment.getTag();
+//            for (T enumTag : enumValuesAll()) {
+//                if (enumTag.name().equals(fragmentTag) && !fragment.isVisible()) {
+//                    activeTag = enumTag;
+//                    stop = true;
+//                    break;
+//                }
+//            }
+//
+//            if (stop) break;
+//        }
+//        return activeTag;
     }
 
 
