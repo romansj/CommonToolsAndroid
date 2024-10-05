@@ -8,7 +8,7 @@ PUBLISH_VERSION = '0.0.1'
 ```
 
 ## Publish to Maven Central
-Run publish task from command line to pick up environment variables:
+Run publish task from command line to pick up environment variables(IDE will not automatically pick up env vars):
 ```groovy
 gradle publish
 ```
@@ -28,7 +28,9 @@ SIGNING_KEY
 Can run with IntelliJ because no environment variables are needed.
 
 ```groovy
-gradle lib:publishToMavenLocal
+gradle publishToMavenLocal
+// or individual
+gradle keyboard:publishToMavenLocal
 ```
 
 ### Import in consumer project
